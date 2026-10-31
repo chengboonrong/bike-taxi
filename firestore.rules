@@ -1,0 +1,83 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function signedIn() { return request.auth != null; }
+    function uid() { return request.auth.uid; }
+    function phone() { return request.auth.token.phone_number; }
+    function isAdmin() { return signedIn() && exists(/databases/$(database)/documents/admins/$(uid())); }
+    function driverDoc() { return get(/databases/$(database)/documents/drivers/$(uid())).data; }
+    function isApprovedDriver() { return signedIn() && driverDoc().approved == true; }
+    function changed() { return request.resource.data.diff(resource.data).affectedKeys(); }
+    function moveTo(from, to) { return resource.data.status == from && request.resource.data.status == to; }
+
+    // Admins are added by hand in the Firestore console: admins/<auth uid>.
+    match /admins/{id} {
+      allow read: if signedIn() && id == uid();
+    }
+
+    match /drivers/{id} {
+      allow read: if signedIn() && (id == uid() || isAdmin());
+      allow create: if signedIn() && id == uid()
+        && request.resource.data.keys().hasOnly(['name', 'plate', 'phone', 'approved', 'createdAt'])
+        && request.resource.data.name is string && request.resource.data.name.size() > 0
+        && request.resource.data.plate is string && request.resource.data.plate.size() > 0
+        && request.resource.data.phone == phone()
+        && request.resource.data.approved == false
+        && request.resource.data.createdAt == request.time;
+      allow update: if isAdmin() && changed().hasOnly(['approved']);
+    }
+
+    match /rides/{id} {
+      allow read: if signedIn() && (
+        resource.data.customerId == uid()
+        || resource.data.driverId == uid()
+        || (resource.data.status == 'requested' && isApprovedDriver())
+        || isAdmin());
+
+      // The client routes the ride on Valhalla and prices it. These checks prove the road distance
+      // is plausible for the pins (no shorter than the straight line, less 300 m for snapping to a
+      // road; no more than 4x it plus 2 km) and the fare follows the published formula
+      // ($2.50 + $1.50 a mile, rounded to 10 cents). They don't prove the route shape: it isn't
+      // re-routed here. Production step: route and price in a Cloud Function that calls Valhalla.
+      allow create: if signedIn()
+        && request.resource.data.keys().hasOnly(['customerId', 'customerPhone', 'pickup', 'drop', 'distanceKm', 'fare', 'route', 'status', 'driverId', 'createdAt'])
+        && request.resource.data.customerId == uid()
+        && request.resource.data.customerPhone == phone()
+        && request.resource.data.pickup is latlng
+        && request.resource.data.drop is latlng
+        && request.resource.data.distanceKm is number
+        && request.resource.data.fare is number && request.resource.data.fare > 0
+        && request.resource.data.route is string && request.resource.data.route.size() <= 20000
+        && request.resource.data.distanceKm * 1000 + 300 >= request.resource.data.pickup.distance(request.resource.data.drop)
+        && request.resource.data.distanceKm * 1000 <= request.resource.data.pickup.distance(request.resource.data.drop) * 4 + 2000
+        && math.abs(request.resource.data.fare - (2.5 + 1.5 * request.resource.data.distanceKm * 0.621371)) <= 0.06
+        && request.resource.data.status == 'requested'
+        && request.resource.data.driverId == null
+        && request.resource.data.createdAt == request.time;
+
+      allow update: if signedIn() && (
+        // Customer cancels before the trip starts; the assigned driver can back out before pickup.
+        ((resource.data.customerId == uid() && resource.data.status in ['requested', 'accepted'])
+            || (resource.data.driverId == uid() && resource.data.status == 'accepted'))
+          && request.resource.data.status == 'cancelled'
+          && changed().hasOnly(['status', 'cancelledAt'])
+        // An approved driver takes an open request, as themselves.
+        || (isApprovedDriver() && moveTo('requested', 'accepted')
+          && request.resource.data.driverId == uid()
+          && request.resource.data.driverName == driverDoc().name
+          && request.resource.data.driverPlate == driverDoc().plate
+          && request.resource.data.driverPhone == phone()
+          && changed().hasOnly(['status', 'driverId', 'driverName', 'driverPlate', 'driverPhone', 'acceptedAt']))
+        // The assigned driver starts, ends, or shares location.
+        || (resource.data.driverId == uid() && (
+              (moveTo('accepted', 'started') && changed().hasOnly(['status', 'startedAt']))
+           || (moveTo('started', 'completed') && changed().hasOnly(['status', 'completedAt']))
+           || (resource.data.status in ['accepted', 'started'] && changed().hasOnly(['driverLocation'])
+               && request.resource.data.driverLocation is latlng)))
+        // Admin cancels anything still open.
+        || (isAdmin() && resource.data.status in ['requested', 'accepted', 'started']
+          && request.resource.data.status == 'cancelled'
+          && changed().hasOnly(['status', 'cancelledAt'])));
+    }
+  }
+}

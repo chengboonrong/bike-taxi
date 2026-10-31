@@ -1,0 +1,9 @@
+{
+  "indexes": [
+    { "collectionGroup": "rides", "queryScope": "COLLECTION",
+      "fields": [ { "fieldPath": "customerId", "order": "ASCENDING" }, { "fieldPath": "status", "order": "ASCENDING" } ] },
+    { "collectionGroup": "rides", "queryScope": "COLLECTION",
+      "fields": [ { "fieldPath": "driverId", "order": "ASCENDING" }, { "fieldPath": "status", "order": "ASCENDING" } ] }
+  ],
+  "fieldOverrides": []
+}
