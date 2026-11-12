@@ -7,6 +7,7 @@ import 'package:flutter/services.dart' show SystemChrome, appFlavor;
 
 import 'admin.dart';
 import 'common.dart';
+import 'compute.dart' show initializeCompute;
 import 'customer.dart';
 import 'driver.dart';
 import 'firebase_options.dart';
@@ -15,6 +16,7 @@ import 'theme.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(transitOverlay);
+  await initializeCompute();
   await Firebase.initializeApp(options: firebaseOptions);
   if (emulatorHost.isNotEmpty) {
     await FirebaseAuth.instance.useAuthEmulator(emulatorHost, 9099);

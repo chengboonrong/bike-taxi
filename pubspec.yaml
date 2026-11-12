@@ -39,6 +39,9 @@ dependencies:
   geolocator: ^14.1.2
   url_launcher: ^6.3.2
   http: ^1.6.0
+  rust_lib_bike_taxi:
+    path: rust_builder
+  flutter_rust_bridge: 2.11.1
 
 dev_dependencies:
   flutter_test:

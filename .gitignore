@@ -56,3 +56,6 @@ node_modules/
 
 # Local design tool workspace
 /.impeccable/
+
+# Rust compilation artifacts
+/rust/target/

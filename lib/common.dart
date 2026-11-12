@@ -9,17 +9,13 @@ import 'package:geolocator/geolocator.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import 'compute.dart' show milesPerKm;
 import 'routing.dart' show decodePolyline;
 import 'theme.dart';
 
-const baseFare = 2.5;
-const perMile = 1.5;
-const milesPerKm = 0.621371;
-const defaultCentre = LatLng(40.7549, -73.9840); // Midtown Manhattan
+export 'compute.dart' show fareFor, baseFare, perMile, milesPerKm;
 
-/// $2.50 + $1.50 a mile, rounded to 10 cents. Distances are stored in km.
-double fareFor(double km) =>
-    ((baseFare + perMile * km * milesPerKm) * 10).round() / 10;
+const defaultCentre = LatLng(40.7549, -73.9840); // Midtown Manhattan
 
 String money(num v) => '\$${v.toStringAsFixed(2)}';
 

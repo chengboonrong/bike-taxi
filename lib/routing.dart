@@ -1,11 +1,13 @@
 // Road routes from Valhalla (https://github.com/valhalla/valhalla).
 import 'dart:convert';
-import 'dart:math' show pow;
 
 import 'package:http/http.dart' as http;
 import 'package:latlong2/latlong.dart';
 
 import 'common.dart' show emulatorHost;
+import 'compute.dart' show decodePolyline;
+
+export 'compute.dart' show decodePolyline;
 
 const _valhallaUrl = String.fromEnvironment('VALHALLA_URL');
 
@@ -67,27 +69,4 @@ Future<RideRoute> routeBetween(LatLng a, LatLng b) async {
     minutes: ((summary['time'] as num) / 60).ceil(),
     encoded: encoded,
   );
-}
-
-/// Decodes an encoded polyline; Valhalla uses precision 6, Google precision 5.
-List<LatLng> decodePolyline(String s, {int precision = 6}) {
-  final factor = pow(10, precision);
-  final points = <LatLng>[];
-  var i = 0, lat = 0, lon = 0;
-  int next() {
-    var shift = 0, result = 0, b = 0;
-    do {
-      b = s.codeUnitAt(i++) - 63;
-      result |= (b & 0x1f) << shift;
-      shift += 5;
-    } while (b >= 0x20);
-    return result & 1 == 1 ? ~(result >> 1) : result >> 1;
-  }
-
-  while (i < s.length) {
-    lat += next();
-    lon += next();
-    points.add(LatLng(lat / factor, lon / factor));
-  }
-  return points;
 }
