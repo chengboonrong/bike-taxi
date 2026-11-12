@@ -27,7 +27,8 @@ List<LatLng> decodePolylineDart(String s, {int precision = 6}) {
       }
       final b = code - 63;
       result |= (b & 0x1f) << shift;
-      if (b < 0x20) return result & 1 == 1 ? ~(result >> 1) : result >> 1;
+      // Dart-to-JavaScript bitwise NOT yields an unsigned 32-bit value.
+      if (b < 0x20) return result & 1 == 1 ? -(result >> 1) - 1 : result >> 1;
     }
     throw const FormatException('polyline component too long');
   }
