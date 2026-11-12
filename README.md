@@ -19,6 +19,15 @@ Built with Flutter, Firebase Auth (phone OTP), Cloud Firestore with tested secur
 Everyone signs in with a phone number and an SMS code. Fares are cash: `$2.50 + $1.50 per mile` on the road distance
 (routed by Valhalla, see below).
 
+## Flutter/Rust POC
+
+Android builds now require Rust (`cargo`/`rustup` on PATH); Cargokit builds the
+embedded crate automatically. Computation stays in Dart by default. Opt in with
+`--dart-define=USE_RUST=true` on either Android flavor; Web always uses Dart.
+See [architecture, tests and rollback](docs/flutter-rust-poc.md) and
+[measured benchmarks](docs/flutter-rust-benchmarks.md). Client Rust does not replace
+trusted server-side fare enforcement.
+
 ## 1. Run locally with the emulators
 
 ```sh

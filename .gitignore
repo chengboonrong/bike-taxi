@@ -56,3 +56,9 @@ node_modules/
 
 # Local design tool workspace
 /.impeccable/
+
+# Rust compilation artifacts
+/rust/target/
+
+# Local Kotlin compiler cache
+/android/.kotlin/

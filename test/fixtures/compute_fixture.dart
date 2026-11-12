@@ -1,0 +1,906 @@
+// Generated from compute.json by tool/update_fixture_dart.py.
+const computeFixtureJson = r'''
+{
+  "source": "Valhalla FOSSGIS public demo, motorcycle, km; captured 2026-11-12. Map data OpenStreetMap contributors (ODbL). No personal data.",
+  "routes": [
+    {
+      "name": "midtown_short",
+      "precision": 6,
+      "encoded": "wmnvlApbsblC[Sk@_@}]sUyByAqBjGkb@~rAuEzNgJpYwCjJ[`A_@jAiBxFkB`Gw@hCuAhEbCbB`_@fV|DhClDbCf_@dWvBxAhBjAbQ|KtLvHnBnAlBnAl]vTbC|AtClBj]jUdDzB|AbAzKlH`QfLbC~AbBhAf^zUnBrA`CxAl^hUzBvAlBpAz^lVhDzBnD`Cf`@fW|AbAjCbB~AdA`ZxRl@`@zBxAlAv@`An@f]dU`BfAeBpFgH~TgInWcEnMeBtFq@rB{CmBm@a@g@S}@Mm@@{@TwAj@",
+      "km": 1.472,
+      "seconds": 276.015,
+      "pointCount": 70,
+      "first": [
+        40.754924,
+        -73.984057
+      ],
+      "last": [
+        40.749887,
+        -73.993229
+      ]
+    },
+    {
+      "name": "central_park",
+      "precision": 6,
+      "encoded": "gptvlAr{ublCpCfB_BdF[dAg@~A_L|]aLh^gg@t~AiB|F{B~Ge}@prCiDnKkBnGoBdGgcAbaDaBhFsBuAc_@mVyBwAkBoAa_@kVeBgA_C}Ao^}UqBsAaCaBo^}Ui@]oAw@yB}AwHaFaU{NsBuA}B{A{^kVcBgAyByAw^uVcCcBaBcAiXcQ}EyCmBoAsBuA}^gVcBiA{ByAaXcQeFeDaCaBaBiAe_@cVmBmAqBqAaLoHaKwGeCaBgBiA{DiCeEsCiXeR{EeDmBqA}B_BsNyJ}NwJcBgAmCgBsIwF}NsJyCqBkCeB}CsBiBkAoD_CmBqAoCiBqGgEuCkBkBoAuBwAmCgBwHaFmCgBoGeEkBmAqCkBoD_CuBuAeHuEsCkByAaAqEyC_C{AwBwAeb@aX{AiAsCoBy\\wTcD{B}BwAkLyHmQmLaC}AuCkBi]gUeBiAqAy@q@c@w^cVkBmAwBwAw]oUyBsAmCcBa_@qVgBwAwCwB_IgFgJiFcEyD}AiA{BcBeAo@sBuAmJqGuRmLcEeCcEmCgTeNcK{GeBkA{BwAu_@mVgBkAwBmAoYwQ_EgCwBsAoBqA}_@aWqAy@iCeBaZwRuDcCaC_B}AcAs_@yVgBkAyBwAgLmHgSoMwDcC{DkCe`@uWcBkAaC}AmPwKsGgEkE{CqBsAuBuAq_@sVkBmAuBuAaXeQ}EaDsBuA}B{Am_@uVaBgAeCaBq_@wVcBiA}B{AoLaImR_M}DgC`BmF`cAw`DdBsFnBiGvOqf@jWmy@jO{e@rIyWlBiFdDwCZ}@hCuJnAsEhAsEfCqOlAsJ?{ErAqIp@sDx@yDr@kC|@yCjAaDvAeDxAkDtEeJzJcSxAgDpA}ClAkDtAcEpAuExAqFvAgGnAmGtJmg@xC}OzDuSfBiJhA{Ex@oDt@mCvAcFr@uBl@kBrAuDvAkD|AgD`ByCdB_CrBiBpB{A`CsAfB}@hBs@xBs@rCm@vBa@bO}BhCg@jBc@dCs@dC{@rCoAdCsArDaCvC{BrBkBpBuBzAmBnA}BvKsRrGsMfBUz@w@zA_BpAiA~DmC|AeAzCaCnC_CjBcBpDqDtD}DzDeExN}PrAiBnAiBp@qAn@sA|@qB|@}BbPsg@xD{LpGiTr@wBzAaFgBoAm_@{VqBqA_B|E{c@|uAmA~DkBvF_BpFkA~DmAfEmAbFkAjFuAjHkCjNkAzFkAvEiAbEq@bC?nCsGrMwKrRoA|B{AlBqBtBsBjBwCzBsD`CeCrAsCnAeCz@eCr@kBb@iCf@cO|BwB`@sCl@yBr@iBr@gB|@aCrAqBzAsBhBeB~BaBxC}AfDwAjDsAtDm@jBs@tBwAbFu@lCy@nDiAzEgBhJ{DtSyC|OuJlg@oAlGwAfGyApFqAtEuAbEmAjDqA|CyAfD{JbSuEdJyAjDwAdDkA`D}@xCs@jCy@xDq@rDsApIwB|C??",
+      "km": 6.833,
+      "seconds": 772.698,
+      "pointCount": 352,
+      "first": [
+        40.758036,
+        -73.985482
+      ],
+      "last": [
+        40.785006,
+        -73.968356
+      ]
+    },
+    {
+      "name": "brooklyn_manhattan",
+      "precision": 6,
+      "encoded": "asxqlAnde`lCvADfDNhCJjMh@bCJfQt@pCLI|DwGz`DIfDuCMgMk@sUeAeCIsAIsAIwBIs@EIpD}@fb@yAxs@{BvhAIpDGxE}FrlCGrEUnIOnCO|BUjCwBdUg@fFyC^S@cEd@sD`@yARgCZ{I~@iS~B}BXwC\\wPlBkDj@qBTeQnBqDf@_Ef@aHx@mDb@aUlC_CXsCZad@dFgCX{C^cKlA_X`DuBTkCZoQtB}N`BuBTwBXwBVme@vFcBR_CX}d@nF_CVwC\\mH|@}Fp@sRxB_C\\_CXsd@lFcCXuC\\qd@nFqBTmCZwd@nFsBTcCXoNbB{C\\sPpBuBToC\\{_@vEiCZsC\\{BVih@|Fwh@dGaCXwC\\ePlBgx@lJkn@lHwBViC\\{Gt@yIdAqk@zG}VvCmANeCZ_D\\s}BdX_ALeCXeD`@u{B~WYB{@JiCZqDb@_RvBoPpByBV`@tEhDl`@bJldAXfD^pEbFpk@^fEdC|Wh@jH}BrE{KdWeAfCiClAmErHeFtIgHhLyBgAoGqDcHwKgo@yVsDwA}D{AmPoGcc@uJmSmFqh@kPcf@aUoiA_i@evBcbA_]}PwuAkp@cBy@qSmKmCuAmq@y`@sXcPa]{RkO}IeyAk{@cTaNkSaOgQsOgHsF}\\_]wx@qaAya@{j@e`@km@w]ml@ckAqsBe}@y`Bsc@e{@gd@g|@iPk\\oSyb@aQk^mNmZkCsFoCsFkCiFgC{EuCaFoCwEmCqEyh@{x@gDkFmCkEoCwEgCuEiCeFcC_FaCiF_Vci@{GgOuDgI}BqF_CwFqCiHgCaHqB{FmBiGsAgFcBoGyAgGqAyFqAcGeAkFyAiIgBsK_S}oAoAgU_Fm]gDcWoLw|@{BkPq@eEaA_GoA{GqAwG{AqGgBmHaGaX_CcH}BsGiBeFuCeHmCiG{CwGoCsFkCkFwCkFqCmE{CaFwCmE{CiEqEeGocBctBiI_KcHuIiGsHuEaFeFuFcEgEoEkE{FoFkFuEmGaFwEoD}EoDqFaE{GyEoFoDuEuCgEmCoaAwk@wd@g[{b@}W{CoBmD{B{BaBqBcBwB}B_B}B{A_C}AgDwAuDgAkD_A_Eo@cEe@aEYoEGsEB}DNcEV{D\\{DdEwd@GsGKoEIwCQiD]qCg@oDo@yCy@uCmAkDeA_CuAiCuAqB}AoBwA{AwAiAmBuAkC}AeBu@{Bw@aCi@uCa@gCM{DE{CF_ER_CVmCl@qBh@}Al@cClAuBlAwF|DeG~DcFtEsEjFsD`F}C`FuCjFcClFiBdEmBfFgBrFgA|DuA|FgGx[cFnRsAhLwBlNgBlKsBjKiBfJiBzIcCzKsBdKwBjLmBfLyAlLqAjLyB~TsBrRwEps@wWj`CgJzv@yGf|@{NfiBi@zGm@|G}@|IsQn~AaAlJq@fHe@tGc@~GcCvc@i@dIa@xGo@dJo@nIy@vJ_AzJy@nHw@tGcAhHoAfJuAhJsAbIwAvHwAnHiBrI_B|HeBtHwA~FgB|GwAfFkBrGyAdFyD~Lg_BhcFeCfIwBzH{BtIsBlIiB~HoAfGyAtH}AnIwAdJmAzIiArIcAlIee@raEg@`Fm@`Gc@hFa@vF[tE[dGOhGGrGAfGB`GFlHjEnh@xDrf@d@vFXdETfEH|EB|DKxFe@zMk@fM]|IY|KEjCUvMM`LIrK?`IQfDX|TArPExO_AbQyAnQ_j@j_F}DdXeGjYwE`O{GdRiHlP}HjOiaHfhLcE|J_EtLqC`LiB~JwAtMi@rLAvNf@bMfAvMtC|O~BnIhF`LjF|KfHdJ`FnEtG|Dbr@fb@bGvFjFzHtEjKnDtMvBnOl@zMKdNC`BMpB[nCc@|Bi@tB[fA{BdHmF|OkD~I_GlKkCfIqG`SiQpj@{@hEi@lC_DtJi@~Ai@bAk@v@w@r@y@h@wCbAe@Vc@b@e@n@Wh@_DtIkEhN}@tCg@~AcC~HyBsAoSaNqGgEaAo@eBiA}ByAc@Yo[{S{@i@sCkB{AcAe@YiZyR}AeAuByAgBmAw@i@yGkEcQgLqAy@cC}AmBoAw@e@mH_FuPaL{AaAyDeC_BhFo@nB}_@dmAk@bByAtEsAdEs@zBmHfUuSvp@}AbFm@jBoBpGuBxGgJzYqBrGqBtGaAzCu@pBu@lB}BfGy@zBo@fBm@bBmCxI_BtEuAdEaXdz@cJrYyAnFkB|Gyc@xuAg_@lkAeHzToBjGcDyB",
+      "km": 15.698,
+      "seconds": 1492.996,
+      "pointCount": 549,
+      "first": [
+        40.678209,
+        -73.944152
+      ],
+      "last": [
+        40.754924,
+        -73.984057
+      ]
+    },
+    {
+      "name": "midtown_short_p5",
+      "precision": 5,
+      "encoded": "g}vwFj_qbMCACCcBgAKIIZqBjGUr@c@rAMb@CFADIXKXELGRLHdBhAPLPLfBjAJHHFx@f@j@^HFJF`BdAJFNJ~AfAPJFDh@\\x@h@JHJFbBhAHFLFbBfAJFJFdBjANJPLhBlAHDLHHDtA~@BBJFFDFD~AdAHFIV]dA_@lASl@IXEHOICCCAE?C?E@IB",
+      "km": 1.472,
+      "seconds": 276.015,
+      "pointCount": 70,
+      "first": [
+        40.75492,
+        -73.98406
+      ],
+      "last": [
+        40.74989,
+        -73.99323
+      ]
+    },
+    {
+      "name": "central_park_p5",
+      "precision": 5,
+      "encoded": "wpwwFfhqbMNHIVCDCHg@bBi@bBaCpHIXKZgEvMOf@IZKXyEdOIVKGeBkAMGIGeBkAIEMIcBiAKGKIeBiACAGEKI_@UeAq@KIKGeBkAIEKIeBkAKGIGqAy@UOIGKGeBiAIGMGoAy@UQMGGGgBiAIGKGi@]e@[MIIGSMSMoA}@UOKGKIq@e@q@e@IEMKa@Ws@e@OIMIOKIGQMIGMI[SOIIGKIMI_@UMIYSKGMKQKKG[UOIGGUMKIKGoBoAIGOK}AeAOKMGi@_@{@i@KIOI_BgAIGGEEAeBkAIEKIaBgAKGMIgBkAIGOK]Wc@USSIEKIGEIGe@[}@i@SMSMcAo@e@]IEMIgBiAIGKGsA{@SMKGKGgBmAGCMKwA}@QMKIIEgBkAIGKGk@]_Ao@QKSMiBoAIGKGw@i@[SSMKIKGgBkAIGKGoAy@UOKGMIeBkAIEMIgBkAIGKIk@_@}@k@SMHWxEeOHWJYt@_ClAyDr@{B`@oAHWPM@ELe@FUFSLu@Dc@?UHa@BQDSDKDOFOFQFOTc@d@_AHQFOFOFSFUFWHYF[d@_CLu@RaAHc@FWBODMHWBKDIFQFQHOHOHKJKHGLGHGHCJENCJCr@KJCJCLCJENGJIPKNKJKJKFIFKf@_AZm@HADEHIFGRMHELMLKJIPQPQPSr@y@FIFKBGDGDKDKt@aCRk@XcADKHWKGgBkAIGITuBtGGRIVIVGRGRGTGVG\\Mp@GVGTEREL?L[l@g@~@GJGHKJKJOJQJKHOFKDMBKBKBs@JKBOBKDIBIFMFIFKJIJININGPGPEHCJIVELCNGVIb@S`AMt@e@~BGZIXGVGTGRGNGNIPe@~@Ub@GNGPGNENEJERCPI`@KN??",
+      "km": 6.833,
+      "seconds": 772.698,
+      "pointCount": 352,
+      "first": [
+        40.75804,
+        -73.98548
+      ],
+      "last": [
+        40.78501,
+        -73.96836
+      ]
+    },
+    {
+      "name": "brooklyn_manhattan_p5",
+      "precision": 5,
+      "encoded": "y}gwF|eibMH?N@L@l@BJ@z@BL@AR[dO?NOAk@CiAEKAIAG?K?CAAPEnBGhDMjF?PATWbMATA`@?LAJALKfACTOBA?SBQBG@M@c@D_ALK@O@w@JQBK@y@JQBQB]DOBgALK@O@uBVM@OBe@FoANK@M@y@Js@HK@K@KByBVI@M@wBVMBM@]DYD_AJK@KByBTKBO@wBVI@OBwBVK@K@q@HOBw@HKBM@iBTM@MBK@eCXcCXM@MBw@HwDb@uC\\KBM@[Dc@DmCZkANG@M@OBsKnAG@K@QBmKnAC?E@K@QB}@Jw@JK@BRNjBb@|E@NBTTlCBRLnAB\\KTi@jAGLKFU\\Ub@]h@KG[Q[g@yCkAQISGw@[sBc@_AWeCw@}BeAmFgC{JuE_By@uG}CIEaAg@MGaDkBqAu@_B_As@c@aH_EaAo@aAs@y@u@]W_B_BwDsEoBkCiBuCaBoCsFuJgEwHsBaEwBcEu@}AaAqBy@cBq@wAMWMYMUMUMWMSOUcCwDQWMSMUMUMUMWKUiAgC[s@Q_@KWMYM[M]KYIYGUI[IYGYGYGWG_@Ig@_AcGGeAUaBQmAi@cEMw@CSEYG[G[I[I]YoAM]K[IUO]MYO[MWMWMWOSMUOUOSSYaIuJa@g@[a@[]SUWYSSSSYWUS[WUQUOWS[UWQUMSMsEoCyByAqBoAOKQKKIIIKKIKIMGOIQGQEQCSCSASAU@S?Q@SBQRyBAY?UAMAQAMCQCOEMGQGKGMGKIIGIIGIGMIICMEKCOCKAS?O?QBM@MBIBIBMFKFWRYPUTUVQTOTOVKVIRKVIVGPGXYzAW|@Gj@Kn@If@Kf@Ib@I`@Mh@Kf@Kh@Ih@Ij@Gh@KdAK~@UfDmA|Kc@pD[bEs@rICZC\\E`@{@pHEb@E\\CZCZKtBC^C\\C`@E`@Ed@Ed@E\\CZG\\Gb@Gb@G^I^G\\I`@I^I\\IXI\\GTKZGVSj@sHxUK`@K\\Mb@I^K^GXG^I`@Gb@G`@G`@E`@yBlRCTEXAVCVATCXAX?Z?Z?V?^TbCP|BBX@R@R@T?PAXCl@Cl@Ab@Ch@?LAl@Ah@?f@?^AP@dA?v@?t@Ex@Iz@iClUQnAYrAUr@[z@]v@_@r@a\\pi@Qd@Sj@Mh@Kd@Gn@Ch@?p@Bl@Dn@Nt@J`@Vh@Vf@\\b@TTZPbDnBXXT^Td@Pn@Jr@Bn@?n@AH?JCLCJCJAFK\\Wt@Q`@Wf@O`@Y~@y@jCGRCLOb@CHCFCBEDEBMDCBCBCBABO`@Sp@ELCHM^KGaAo@[SEEIEKICA{AcAECMIIGCAuA_AIEKIIGEC[Sy@i@GEMIIGEA]Ww@i@IEQMIVCJiBxFCHITGPEL]dAaA~CITCJKXIZc@tAKZKZENEJEHKXEJCJCHM`@ITIRoAzDc@tAGVIZuBtGgBrF]dAIZOK",
+      "km": 15.698,
+      "seconds": 1492.996,
+      "pointCount": 549,
+      "first": [
+        40.67821,
+        -73.94415
+      ],
+      "last": [
+        40.75492,
+        -73.98406
+      ]
+    }
+  ],
+  "drivers": [
+    {
+      "id": "synthetic-driver-000",
+      "distanceKm": 0.3,
+      "routeIndex": 0,
+      "latitude": 40.754924,
+      "longitude": -73.984057,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-001",
+      "distanceKm": 8.219,
+      "routeIndex": 1,
+      "latitude": 40.764628,
+      "longitude": -73.991828,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-002",
+      "distanceKm": 16.138,
+      "routeIndex": 2,
+      "latitude": 40.683469,
+      "longitude": -73.953931,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-003",
+      "distanceKm": 24.057,
+      "routeIndex": 0,
+      "latitude": 40.75503,
+      "longitude": -73.987692,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-004",
+      "distanceKm": 31.976,
+      "routeIndex": 1,
+      "latitude": 40.778005,
+      "longitude": -73.982029,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-005",
+      "distanceKm": 39.895,
+      "routeIndex": 2,
+      "latitude": 40.709041,
+      "longitude": -73.956685,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-006",
+      "distanceKm": 47.814,
+      "routeIndex": 0,
+      "latitude": 40.750389,
+      "longitude": -73.991065,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-007",
+      "distanceKm": 55.733,
+      "routeIndex": 1,
+      "latitude": 40.783584,
+      "longitude": -73.964645,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-008",
+      "distanceKm": 3.652,
+      "routeIndex": 2,
+      "latitude": 40.729219,
+      "longitude": -73.927002,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-009",
+      "distanceKm": 11.571,
+      "routeIndex": 0,
+      "latitude": 40.749887,
+      "longitude": -73.993229,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-010",
+      "distanceKm": 19.49,
+      "routeIndex": 1,
+      "latitude": 40.782856,
+      "longitude": -73.963633,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-011",
+      "distanceKm": 27.409,
+      "routeIndex": 2,
+      "latitude": 40.736992,
+      "longitude": -73.930661,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-012",
+      "distanceKm": 35.328,
+      "routeIndex": 0,
+      "latitude": 40.75532,
+      "longitude": -73.987485,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-013",
+      "distanceKm": 43.247,
+      "routeIndex": 1,
+      "latitude": 40.76839,
+      "longitude": -73.989088,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-014",
+      "distanceKm": 51.166,
+      "routeIndex": 2,
+      "latitude": 40.748023,
+      "longitude": -73.968508,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-015",
+      "distanceKm": 59.085,
+      "routeIndex": 0,
+      "latitude": 40.750921,
+      "longitude": -73.990677,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-016",
+      "distanceKm": 7.004,
+      "routeIndex": 1,
+      "latitude": 40.781778,
+      "longitude": -73.979322,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-017",
+      "distanceKm": 14.923,
+      "routeIndex": 2,
+      "latitude": 40.752354,
+      "longitude": -73.978244,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-018",
+      "distanceKm": 22.842,
+      "routeIndex": 0,
+      "latitude": 40.749843,
+      "longitude": -73.993207,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-019",
+      "distanceKm": 30.761,
+      "routeIndex": 1,
+      "latitude": 40.782395,
+      "longitude": -73.96351,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-020",
+      "distanceKm": 38.68,
+      "routeIndex": 2,
+      "latitude": 40.685124,
+      "longitude": -73.954261,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-021",
+      "distanceKm": 46.599,
+      "routeIndex": 0,
+      "latitude": 40.755373,
+      "longitude": -73.987447,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-022",
+      "distanceKm": 54.518,
+      "routeIndex": 1,
+      "latitude": 40.783844,
+      "longitude": -73.965538,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-023",
+      "distanceKm": 2.437,
+      "routeIndex": 2,
+      "latitude": 40.713471,
+      "longitude": -73.953604,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-024",
+      "distanceKm": 10.356,
+      "routeIndex": 0,
+      "latitude": 40.751009,
+      "longitude": -73.990612,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-025",
+      "distanceKm": 18.275,
+      "routeIndex": 1,
+      "latitude": 40.771047,
+      "longitude": -73.987125,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-026",
+      "distanceKm": 26.194,
+      "routeIndex": 2,
+      "latitude": 40.731696,
+      "longitude": -73.925218,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-027",
+      "distanceKm": 34.113,
+      "routeIndex": 0,
+      "latitude": 40.749813,
+      "longitude": -73.993196,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-028",
+      "distanceKm": 42.032,
+      "routeIndex": 1,
+      "latitude": 40.785162,
+      "longitude": -73.976851,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-029",
+      "distanceKm": 49.951,
+      "routeIndex": 2,
+      "latitude": 40.737837,
+      "longitude": -73.935799,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-030",
+      "distanceKm": 57.87,
+      "routeIndex": 0,
+      "latitude": 40.755433,
+      "longitude": -73.987402,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-031",
+      "distanceKm": 5.789,
+      "routeIndex": 1,
+      "latitude": 40.780967,
+      "longitude": -73.962153,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-032",
+      "distanceKm": 13.708,
+      "routeIndex": 2,
+      "latitude": 40.74783,
+      "longitude": -73.970515,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-033",
+      "distanceKm": 21.627,
+      "routeIndex": 0,
+      "latitude": 40.751094,
+      "longitude": -73.99055,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-034",
+      "distanceKm": 29.546,
+      "routeIndex": 1,
+      "latitude": 40.785006,
+      "longitude": -73.968356,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-035",
+      "distanceKm": 37.465,
+      "routeIndex": 2,
+      "latitude": 40.752694,
+      "longitude": -73.979007,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-036",
+      "distanceKm": 45.384,
+      "routeIndex": 0,
+      "latitude": 40.74979,
+      "longitude": -73.993195,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-037",
+      "distanceKm": 53.303,
+      "routeIndex": 1,
+      "latitude": 40.772693,
+      "longitude": -73.985923,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-038",
+      "distanceKm": 1.222,
+      "routeIndex": 2,
+      "latitude": 40.687188,
+      "longitude": -73.954673,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-039",
+      "distanceKm": 9.141,
+      "routeIndex": 0,
+      "latitude": 40.755949,
+      "longitude": -73.987015,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-040",
+      "distanceKm": 17.06,
+      "routeIndex": 1,
+      "latitude": 40.785521,
+      "longitude": -73.969858,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-041",
+      "distanceKm": 24.979,
+      "routeIndex": 2,
+      "latitude": 40.719401,
+      "longitude": -73.945373,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-042",
+      "distanceKm": 32.898,
+      "routeIndex": 0,
+      "latitude": 40.751604,
+      "longitude": -73.990175,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-043",
+      "distanceKm": 40.817,
+      "routeIndex": 1,
+      "latitude": 40.780173,
+      "longitude": -73.959311,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-044",
+      "distanceKm": 48.736,
+      "routeIndex": 2,
+      "latitude": 40.732755,
+      "longitude": -73.924328,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-045",
+      "distanceKm": 56.655,
+      "routeIndex": 0,
+      "latitude": 40.749759,
+      "longitude": -73.993202,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-046",
+      "distanceKm": 4.574,
+      "routeIndex": 1,
+      "latitude": 40.762185,
+      "longitude": -73.993607,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-047",
+      "distanceKm": 12.493,
+      "routeIndex": 2,
+      "latitude": 40.738097,
+      "longitude": -73.937712,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-048",
+      "distanceKm": 20.412,
+      "routeIndex": 0,
+      "latitude": 40.756036,
+      "longitude": -73.986949,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-049",
+      "distanceKm": 28.331,
+      "routeIndex": 1,
+      "latitude": 40.7761,
+      "longitude": -73.983442,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-050",
+      "distanceKm": 36.25,
+      "routeIndex": 2,
+      "latitude": 40.746051,
+      "longitude": -73.972379,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-051",
+      "distanceKm": 44.169,
+      "routeIndex": 0,
+      "latitude": 40.751659,
+      "longitude": -73.990134,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-052",
+      "distanceKm": 52.088,
+      "routeIndex": 1,
+      "latitude": 40.784369,
+      "longitude": -73.967027,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-053",
+      "distanceKm": 60.007,
+      "routeIndex": 2,
+      "latitude": 40.754639,
+      "longitude": -73.983634,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-054",
+      "distanceKm": 7.926,
+      "routeIndex": 0,
+      "latitude": 40.749739,
+      "longitude": -73.993212,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-055",
+      "distanceKm": 15.845,
+      "routeIndex": 1,
+      "latitude": 40.781785,
+      "longitude": -73.963114,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-056",
+      "distanceKm": 23.764,
+      "routeIndex": 2,
+      "latitude": 40.688711,
+      "longitude": -73.954975,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-057",
+      "distanceKm": 31.683,
+      "routeIndex": 0,
+      "latitude": 40.756131,
+      "longitude": -73.98688,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-058",
+      "distanceKm": 39.602,
+      "routeIndex": 1,
+      "latitude": 40.765944,
+      "longitude": -73.990855,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-059",
+      "distanceKm": 47.521,
+      "routeIndex": 2,
+      "latitude": 40.721418,
+      "longitude": -73.941938,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-060",
+      "distanceKm": 55.44,
+      "routeIndex": 0,
+      "latitude": 40.751721,
+      "longitude": -73.99009,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-061",
+      "distanceKm": 3.359,
+      "routeIndex": 1,
+      "latitude": 40.779284,
+      "longitude": -73.981116,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-062",
+      "distanceKm": 11.278,
+      "routeIndex": 2,
+      "latitude": 40.732917,
+      "longitude": -73.923457,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-063",
+      "distanceKm": 19.197,
+      "routeIndex": 0,
+      "latitude": 40.749716,
+      "longitude": -73.993229,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-064",
+      "distanceKm": 27.116,
+      "routeIndex": 1,
+      "latitude": 40.783349,
+      "longitude": -73.964082,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-065",
+      "distanceKm": 35.035,
+      "routeIndex": 2,
+      "latitude": 40.738473,
+      "longitude": -73.93916,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-066",
+      "distanceKm": 42.954,
+      "routeIndex": 0,
+      "latitude": 40.756644,
+      "longitude": -73.986508,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-067",
+      "distanceKm": 50.873,
+      "routeIndex": 1,
+      "latitude": 40.783253,
+      "longitude": -73.963921,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-068",
+      "distanceKm": 58.792,
+      "routeIndex": 2,
+      "latitude": 40.74605,
+      "longitude": -73.97346,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-069",
+      "distanceKm": 6.711,
+      "routeIndex": 0,
+      "latitude": 40.752224,
+      "longitude": -73.989733,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-070",
+      "distanceKm": 14.63,
+      "routeIndex": 1,
+      "latitude": 40.769117,
+      "longitude": -73.988561,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-071",
+      "distanceKm": 22.549,
+      "routeIndex": 2,
+      "latitude": 40.677716,
+      "longitude": -73.944196,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-072",
+      "distanceKm": 30.468,
+      "routeIndex": 0,
+      "latitude": 40.749638,
+      "longitude": -73.993284,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-073",
+      "distanceKm": 38.387,
+      "routeIndex": 1,
+      "latitude": 40.783061,
+      "longitude": -73.978394,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-074",
+      "distanceKm": 46.306,
+      "routeIndex": 2,
+      "latitude": 40.690984,
+      "longitude": -73.955425,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-075",
+      "distanceKm": 54.225,
+      "routeIndex": 0,
+      "latitude": 40.75671,
+      "longitude": -73.986458,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-076",
+      "distanceKm": 2.144,
+      "routeIndex": 1,
+      "latitude": 40.7819,
+      "longitude": -73.963227,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-077",
+      "distanceKm": 10.063,
+      "routeIndex": 2,
+      "latitude": 40.722669,
+      "longitude": -73.940136,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-078",
+      "distanceKm": 17.982,
+      "routeIndex": 0,
+      "latitude": 40.752289,
+      "longitude": -73.989688,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-079",
+      "distanceKm": 25.901,
+      "routeIndex": 1,
+      "latitude": 40.784283,
+      "longitude": -73.966864,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-080",
+      "distanceKm": 33.82,
+      "routeIndex": 2,
+      "latitude": 40.73285,
+      "longitude": -73.922101,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-081",
+      "distanceKm": 41.739,
+      "routeIndex": 0,
+      "latitude": 40.749613,
+      "longitude": -73.993226,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-082",
+      "distanceKm": 49.658,
+      "routeIndex": 1,
+      "latitude": 40.771606,
+      "longitude": -73.986717,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-083",
+      "distanceKm": 57.577,
+      "routeIndex": 2,
+      "latitude": 40.740463,
+      "longitude": -73.943996,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-084",
+      "distanceKm": 5.496,
+      "routeIndex": 0,
+      "latitude": 40.756667,
+      "longitude": -73.986357,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-085",
+      "distanceKm": 13.415,
+      "routeIndex": 1,
+      "latitude": 40.78643,
+      "longitude": -73.975926,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-086",
+      "distanceKm": 21.334,
+      "routeIndex": 2,
+      "latitude": 40.746996,
+      "longitude": -73.975607,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-087",
+      "distanceKm": 29.253,
+      "routeIndex": 0,
+      "latitude": 40.752345,
+      "longitude": -73.989646,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-088",
+      "distanceKm": 37.172,
+      "routeIndex": 1,
+      "latitude": 40.780272,
+      "longitude": -73.961416,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-089",
+      "distanceKm": 45.091,
+      "routeIndex": 2,
+      "latitude": 40.678233,
+      "longitude": -73.94693,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-090",
+      "distanceKm": 53.01,
+      "routeIndex": 0,
+      "latitude": 40.749562,
+      "longitude": -73.993103,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-091",
+      "distanceKm": 0.929,
+      "routeIndex": 1,
+      "latitude": 40.758253,
+      "longitude": -73.986227,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-092",
+      "distanceKm": 8.848,
+      "routeIndex": 2,
+      "latitude": 40.694473,
+      "longitude": -73.956121,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-093",
+      "distanceKm": 16.767,
+      "routeIndex": 0,
+      "latitude": 40.756639,
+      "longitude": -73.986288,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-094",
+      "distanceKm": 24.686,
+      "routeIndex": 1,
+      "latitude": 40.774082,
+      "longitude": -73.984914,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-095",
+      "distanceKm": 32.605,
+      "routeIndex": 2,
+      "latitude": 40.723669,
+      "longitude": -73.93827,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-096",
+      "distanceKm": 40.524,
+      "routeIndex": 0,
+      "latitude": 40.752845,
+      "longitude": -73.98928,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-097",
+      "distanceKm": 48.443,
+      "routeIndex": 1,
+      "latitude": 40.785053,
+      "longitude": -73.968838,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-098",
+      "distanceKm": 56.362,
+      "routeIndex": 2,
+      "latitude": 40.733198,
+      "longitude": -73.921534,
+      "status": "started"
+    },
+    {
+      "id": "synthetic-driver-099",
+      "distanceKm": 4.281,
+      "routeIndex": 0,
+      "latitude": 40.749464,
+      "longitude": -73.992871,
+      "status": "started"
+    }
+  ]
+}
+''';
