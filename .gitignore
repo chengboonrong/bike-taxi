@@ -59,3 +59,6 @@ node_modules/
 
 # Rust compilation artifacts
 /rust/target/
+
+# Local Kotlin compiler cache
+/android/.kotlin/
